@@ -1,5 +1,5 @@
 TgCrypto
-pyrogram
+pyrogram==1.4.16
 py-tgcalls==0.8.5
 pillow
 aiohttp
@@ -7,6 +7,8 @@ aiofiles
 python-arq
 wget
 asyncio
+youtube-search
 youtube-search-python
+youtube-dl
 yt-dlp 
 python-dotenv
