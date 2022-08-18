@@ -125,7 +125,7 @@ async def vplay(client, m: Message):
                             if chat_id in QUEUE:
                                 pos = add_to_queue(
                                     chat_id, songname, ytlink, url, "Video", Q
-                                 
+                                ) 
                                 await huehue.edit(f"Antrian Pada **#{pos}**")
                             else:
                                 try:
@@ -133,7 +133,7 @@ async def vplay(client, m: Message):
                                         chat_id,
                                         AudioVideoPiped(
                                             ytlink, HighQualityAudio(), hmmm
-                                        ),
+                                        )
                                         stream_type=StreamType().pulse_stream,
                                     )
                                     add_to_queue(
