@@ -54,8 +54,8 @@ async def restart(client, m: Message):
 
 @Client.on_message(contact_filter & filters.command(["help"], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
-    HELP = f"*** <b>👋 Hallo {m.from_user.mention}!
-
+    HELP = f"""
+👋 Hallo {m.from_user.mention}!
 🛠 MENU BANTUAN MUSIC PLAYER 🛠
 
 ⚡ PERINTAH UNTUK SEMUA ORANG
