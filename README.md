@@ -1,9 +1,9 @@
-## ❤️ Asad Alexa VC Userbot ❤️
+## ❤️ Eiko VC Userbot ❤️
 
-Asad Alexa VC Bot Is A Telegram Bot Project That's Allow You To Play Audio And Video Music On Telegram Voice Chat Group.
+Eiko VC Bot Is A Telegram Bot Project That's Allow You To Play Audio And Video Music On Telegram Voice Chat Group.
 
 
-<p align="center"><a href="https://t.me/Dr_Asad_Ali"><img src="https://telegra.ph/file/65f6a615fa340c96d52f8.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/tth_kiya98"><img src="https://telegra.ph/file/65f6a615fa340c96d52f8.jpg" width="300"></a></p>
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
     <a href="https://github.com/TheTeamAlexa/AlexaMusic-Userbot/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
