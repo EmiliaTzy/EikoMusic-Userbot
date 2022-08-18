@@ -12,20 +12,20 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("**😜 ɪᴛᴛᴜ 🤏 sᴇʏ ᴘᴀɢᴀʟ sᴏɴɢ ᴄʜᴀʟᴀ ʟᴇʏ ᴘᴇʜʟʏ**")
+            await m.reply("**😁 Nggak tahu harus ngapain**")
         elif op == 1:
-            await m.reply("**sᴏɴɢ ʟɪsᴛ ɪs ᴇᴍᴘᴛʏ ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ**")
+            await m.reply("**List lagu kosong, meninggalkan obrolan suara**")
         elif op == 2:
             await m.reply(
-                f"**ᴇʀʀᴏʀ ᴀᴄᴄᴜʀᴇᴅ** \n**ᴄʟᴇᴀʀɪɴɢ ǫᴜᴇᴜᴇs ᴀɴᴅ ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...**"
+                f"**Terjadi Kesalahan** \n**Membersihkan Antrian Dan Meninggalkan Obrolan Suara...**"
             )
         else:
             await m.reply(
-                f"**sᴋɪᴘᴘᴇᴅ ⏭** \n**🎧 ɴᴏᴡ ᴘʟᴀʏɪɴɢ** - [{op[0]}]({op[1]}) | `{op[2]}`"
+                f"**Melewati ⏭** \n**🎧 Sekarang Diputar** - [{op[0]}]({op[1]}) | `{op[2]}`"
             )
     else:
         skip = m.text.split(None, 1)[1]
-        OP = "**ʀᴇᴍᴏᴠᴇᴅ ғᴏʟʟᴏᴡɪɴɢ sᴏɴɢ ғʀᴏᴍ ᴛʜᴇ ǫᴜᴇʜᴇ:-**"
+        OP = "**Menghapus lagu berikut dari antrean:-**"
         if chat_id in QUEUE:
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
@@ -54,7 +54,7 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
     else:
-        await m.reply("**😜 ɪᴛᴛᴜ 🤏 sᴇʏ ᴘᴀɢᴀʟ sᴏɴɢ ᴄʜᴀʟᴀ ʟᴇʏ ᴘᴇʜʟʏ** 😜")
+        await m.reply("**😁 Nggak tahu harus ngapain** 😁")
 
 
 @Client.on_message(contact_filter & filters.command(["pause"], prefixes=f"{HNDLR}"))
@@ -63,11 +63,11 @@ async def pause(client, m: Message):
     if chat_id in QUEUE:
         try:
             await call_py.pause_stream(chat_id)
-            await m.reply("**sᴏɴɢ ɪs ᴘᴀᴜsᴇᴅ ᴛᴏ ʀᴇsᴜᴍᴇ /resume ⏸️**")
+            await m.reply("**Lagu Dijeda, Untuk Melanjutkan /resume ⏸️**")
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
     else:
-        await m.reply("**😜 ɪᴛᴛᴜ 🤏 sᴇʏ ᴘᴀɢᴀʟ sᴏɴɢ ᴄʜᴀʟᴀ ʟᴇʏ ᴘᴇʜʟʏ** 😜")
+        await m.reply("**😁 Nggak Tahu Harus Ngapain** 😁")
 
 
 @Client.on_message(contact_filter & filters.command(["resume"], prefixes=f"{HNDLR}"))
@@ -76,8 +76,8 @@ async def resume(client, m: Message):
     if chat_id in QUEUE:
         try:
             await call_py.resume_stream(chat_id)
-            await m.reply("**sᴏɴɢ ɪs ʀᴇsᴜᴍᴇᴅ ᴛᴏ ᴘᴀᴜsᴇ /pause ▶**")
+            await m.reply("**Lagu Dilanjutkan, Untuk Melanjutkan /pause ▶**")
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
     else:
-        await m.reply("**😜 ɪᴛᴛᴜ 🤏 sᴇʏ ᴘᴀɢᴀʟ sᴏɴɢ ᴄʜᴀʟᴀ ʟᴇʏ ᴘᴇʜʟʏ** 😜")
+        await m.reply("**😁 Nggak tahu harus ngapain** 😁")
