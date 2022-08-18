@@ -6,5 +6,6 @@ python-arq
 wget
 asyncio
 youtube-search-python
+youtube-dl
 yt-dlp 
 python-dotenv
