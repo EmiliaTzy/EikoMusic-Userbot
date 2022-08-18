@@ -131,9 +131,7 @@ async def vplay(client, m: Message):
                                 try:
                                     await call_py.join_group_call(
                                         chat_id,
-                                        AudioVideoPiped(
-                                            ytlink, HighQualityAudio(), hmmm
-                                        )
+                                        AudioVideoPiped(ytlink, HighQualityAudio(), hmmm), 
                                         stream_type=StreamType().pulse_stream,
                                     )
                                     add_to_queue(
