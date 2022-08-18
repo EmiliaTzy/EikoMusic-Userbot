@@ -61,5 +61,4 @@ async def help(client, m: Message):
 @Client.on_message(contact_filter & filters.command(["repo"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
     REPO = f"**🛠 Jika kamu mau reponya 🛠** \n\n**Hubungi ke** [Az](t.me/tth_kiya98)\n**Jika kamu menyukainya silahkan ** [Bot Management](t.me/EikoManager_Bot) [Update](t.me/CatatanAz) [Gabung](t.me/CatatanAzDay)"
-    await m.reply(RE** [Bot Management](t.me/EikoManager_Bot) [Update](t.me/CatatanAz) [Gabung](t.me/CatatanAzDay)"
-    await m.reply(REPO)PO)
+    await m.reply(REPO)
