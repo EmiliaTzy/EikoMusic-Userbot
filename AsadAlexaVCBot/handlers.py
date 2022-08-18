@@ -78,26 +78,26 @@ async def on_end_handler(client, update: Update):
         op = await skip_current_song(chat_id)
         if op == 1:
             await bot.send_message(
-                chat_id, "🥺 **Nᴏᴛʜɪɴɢ ɪs ɪɴ ᴘʟᴀʏʟɪsᴛ ɪ'ᴍ ʟᴇᴀᴠɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...**"
+                chat_id, "🥺 **Tidak Musik Yang Dimainkan,Meninggalkan Obrolan Suara...**"
             )
         elif op == 2:
             await bot.send_message(
                 chat_id,
-                "**Eʀʀᴏʀ ᴀᴄᴄᴜʀᴇᴅ** \n**Cʟᴇᴀʀɪɴɢ ᴛʜᴇ ᴘʟᴀʏʟɪsᴛ ᴀɴᴅ ʟᴇᴀᴠɪɴɢ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...**",
+                "**Terjadi kesalahan** \n**Membersihkan Daftar Putar Dan Meninggalkan Obrolan Suara...**",
             )
         else:
             await bot.send_message(
-                chat_id, f"**🎧 Nᴏᴡ ᴘʟᴀʏɪɴɢ** \n[{op[0]}]({op[1]}) | `{op[2]}`"
+                chat_id, f"**🎧 Sekarang Diputar** \n[{op[0]}]({op[1]}) | `{op[2]}`"
             )
             keyboard = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "❤️ ᴏᴡɴᴇʀ ❤️", url=f"https://t.me/Dr_Asad_Ali"
+                            "✨ Pemilik ✨", url=f"https://t.me/tth_kiya98"
                         ),
                         InlineKeyboardButton(
-                            "👨‍‍👧‍👦 ɢʀᴏᴜᴘ 👨‍👧‍👦",
-                            url=f"https://t.me/Shayri_Music_Lovers",
+                            "✨ Grup ✨",
+                            url=f"https://t.me/CatatanAzDay",
                         ),
                     ]
                 ]
