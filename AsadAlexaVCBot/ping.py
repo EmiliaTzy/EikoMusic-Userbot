@@ -54,7 +54,31 @@ async def restart(client, m: Message):
 
 @Client.on_message(contact_filter & filters.command(["help"], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
-    HELP = f"**🛠 Menu bantuan 🛠** \n\n**Siapa pun dapat menggunakan perintah ini jika mode grup disetel ke true**\n**untuk memainkan lagu** {HNDLR}play\n** untuk memainkan lagu dalam video** {HNDLR}vplay\n**untuk radio livestreaming** {HNDLR}stream (**untuk link radio**) \n**untuk link live** {HNDLR}vstream (untuk .m3u8 / link live) \n\n**PERINTAH SUDO** (**Anda dapat menjalankan perintah ini jika Anda berada di daftar kontak saya, hubungi pemilik saya** @tth_kiya98 **Untuk menjadi sudo**): \n**untuk mengecek ping** {HNDLR}ping \n**Melewati Lagu** {HNDLR}skip \n**Untuk Menjeda Lagu Yang Sedang Dimainkan** {HNDLR}pause Dan **Untuk Melanjutkan Lagu Yang Dimainkan **{HNDLR}resume \n**Untuk Menghentikan Lagu** {HNDLR}stop / **Untuk Mengakhiri Lagu** {HNDLR}end \n**Untuk Menu Bantuan** {HNDLR}help \n**Untuk Mendapatkan Repo** {HNDLR}repo \n**Untuk Memulai Ulang Bot** {HNDLR}restart"
+    HELP = f"*** <b>👋 Hallo {m.from_user.mention}!
+
+🛠 MENU BANTUAN MUSIC PLAYER 🛠
+
+⚡ PERINTAH UNTUK SEMUA ORANG
+
+• {HNDLR}play [judul lagu | link youtube | balas file audio] - untuk memutar lagu
+• {HNDLR}vplay [judul video | link youtube | balas file video] - untuk memutar video
+• {HNDLR}playlist untuk melihat daftar putar
+• {HNDLR}ping - untuk cek status
+• {HNDLR}stream untuk memainkan livestreaming radio
+• {HNDLR}vstream untuk link livestreaming
+• {HNDLR}id - untuk melihat id pengguna
+• {HNDLR}video - judul video | link yt untuk mencari video
+• {HNDLR}song - judul lagu | link yt untuk mencari lagu
+• {HNDLR}help - untuk melihat daftar perintah
+• {HNDLR}join- untuk join | ke grup 
+• {HNDLR}resume - untuk melanjutkan pemutaran lagu atau video
+• {HNDLR}pause - untuk untuk menjeda pemutaran lagu atau video
+• {HNDLR}skip - untuk melewati lagu atau video (Khusus Perintah ini sudah bisa untuk semua) 
+• {HNDLR}end - untuk mengakhiri pemutaran
+• {HNDLR}restart - memulai ulang bot
+
+👩🏻‍💻 Dibuat Oleh Az ✨
+""" 
     await m.reply(HELP)
 
 
