@@ -29,7 +29,7 @@ Eiko VC Bot Is A Telegram Bot Project That's Allow You To Play Audio And Video M
 ## Heroku Deployment ❤️
 The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheTeamAlexa/AlexaMusic-Userbot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EmiliaTzy/EikoMusic-Userbot)
 
 ### Asad– History
 
