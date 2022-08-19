@@ -78,7 +78,7 @@ async def on_end_handler(client, update: Update):
         op = await skip_current_song(chat_id)
         if op == 1:
             await bot.send_message(
-                chat_id, "🥺 **Tidak Musik Yang Dimainkan,Meninggalkan Obrolan Suara...**"
+                chat_id, "🥺 **Tidak Ada Musik Yang Dimainkan, Meninggalkan Obrolan Suara...**"
             )
         elif op == 2:
             await bot.send_message(
