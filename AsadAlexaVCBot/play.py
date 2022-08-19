@@ -18,7 +18,7 @@ def ytsearch(query):
         for r in search.result()["result"]:
             ytid = r["id"]
             if len(r["title"]) > 34:
-                songname = r["title"][:35] + "..."
+                songname = r["title"][:50] + "..."
             else:
                 songname = r["title"]
             url = f"https://www.youtube.com/watch?v={ytid}"
@@ -60,7 +60,7 @@ async def play(client, m: Message):
                         "✨ Owner ✨", url=f"https://t.me/tth_kiya98"
                     ),
                     InlineKeyboardButton(
-                        "✨ Grup ✨", url=f"https://t.me/Shayri_Music_Lovers"
+                        "✨ Grup ✨", url=f"https://t.me/CatatanAzDay"
                     ),
                 ]
             ]
@@ -72,10 +72,10 @@ async def play(client, m: Message):
                 link = replied.link
                 if replied.audio:
                     if replied.audio.title:
-                        songname = replied.audio.title[:15] + "..."
+                        songname = replied.audio.title[:50] + "..."
                     else:
                         if replied.audio.file_name:
-                            songname = replied.audio.file_name[:15] + "..."
+                            songname = replied.audio.file_name[:50] + "..."
                         else:
                             songname = "Audio"
                 elif replied.voice:
@@ -94,7 +94,7 @@ async def play(client, m: Message):
                         )
                         add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                         await huehue.edit(
-                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:15]}] \n**💬 Obrolan** : `{chat_id}`"
+                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
                         )
                     except Exception as hmme:
                         await huehue.edit(hmme)
@@ -115,7 +115,7 @@ async def play(client, m: Message):
                         hm, ytlink = await ytdl(url)
                         if hm == 0:
                             await huehue.edit(
-                                f"**YTDL ERROR ⚠️** Hubungi ke [Az](t.me/tth_kiya98)",
+                                f"**YTDL ERROR ⚠️** Hubungi [Az](t.me/tth_kiya98)",
                                 disable_web_page_preview=True,
                             )
                         else:
@@ -139,7 +139,7 @@ async def play(client, m: Message):
                                         chat_id, songname, ytlink, url, "Audio", 0
                                     )
                                     await huehue.edit(
-                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:15]}] \n**💬 Obrolan** : `{chat_id}`"
+                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
                                     )
                                 except Exception as ep:
                                     await huehue.edit(f"`{ep}`")
@@ -183,7 +183,7 @@ async def play(client, m: Message):
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                                 await huehue.edit(
-                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:15]}] \n**💬 Obrolan** : `{chat_id}`"
+                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
                                 )
                             except Exception as ep:
                                 await huehue.edit(f"`{ep}`")
@@ -229,7 +229,7 @@ async def stream(client, m: Message):
                         )
                         add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
                         await huehue.edit(
-                            f"Started Playing **[Radio 📻]({link})** in `{chat_id}`",
+                            f"Memulai Memainkan*[Radio 📻]({link})** in `{chat_id}`",
                             disable_web_page_preview=True,
                         )
                     except Exception as ep:
