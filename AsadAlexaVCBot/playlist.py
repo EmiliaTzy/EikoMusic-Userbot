@@ -39,4 +39,4 @@ async def playlist(client, m: Message):
                     QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`"
                 await m.reply(QUE, disable_web_page_preview=True)
         else:
-            await m.reply("😁 **Nggak Tahu harus  **")
+            await m.reply("😁 **Nggak Tahu harus ngapain **")
