@@ -23,7 +23,7 @@ def ytsearch(query):
         for r in search.result()["result"]:
             ytid = r["id"]
             if len(r["title"]) > 34:
-                songname = r["title"][:50] + "..."
+                songname = r["title"][:60] + "..."
             else:
                 songname = r["title"]
             url = f"https://www.youtube.com/watch?v={ytid}"
@@ -84,7 +84,7 @@ async def vplay(client, m: Message):
 
                 if chat_id in QUEUE:
                     pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
-                    await huehue.edit(f"Queued at **#{pos}**")
+                    await huehue.edit(f"Antrian Pada **#{pos}**")
                 else:
                     if Q == 720:
                         hmmm = HighQualityVideo()
@@ -99,7 +99,7 @@ async def vplay(client, m: Message):
                     )
                     add_to_queue(chat_id, songname, dl, link, "Video", Q)
                     await huehue.edit(
-                        f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}]\n**💬 OBROLAN** : `{chat_id}`",
+                        f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}] \n**💬 OBROLAN** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}",
                         disable_web_page_preview=True,
                     )
             else:
@@ -138,7 +138,7 @@ async def vplay(client, m: Message):
                                         chat_id, songname, ytlink, url, "Video", Q
                                     )
                                     await huehue.edit(
-                                        f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}] \n**💬 OBROLAN** : `{chat_id}`",
+                                        f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}] \n**💬 OBROLAN** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}",
                                         disable_web_page_preview=True,
                                     )
                                 except Exception as ep:
@@ -176,7 +176,7 @@ async def vplay(client, m: Message):
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                                 await huehue.edit(
-                                    f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}] \n**💬 OBROLAN** : `{chat_id}`",
+                                    f"**Memulai Memainkan Video ▶** \n**🎧 LAGU** : [{songname}] \n**💬 OBROLAN** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}",
                                     disable_web_page_preview=True,
                                 )
                             except Exception as ep:
