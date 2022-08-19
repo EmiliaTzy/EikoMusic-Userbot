@@ -23,7 +23,7 @@ def ytsearch(query):
         for r in search.result()["result"]:
             ytid = r["id"]
             if len(r["title"]) > 34:
-                songname = r["title"][:35] + "..."
+                songname = r["title"][:50] + "..."
             else:
                 songname = r["title"]
             url = f"https://www.youtube.com/watch?v={ytid}"
@@ -76,9 +76,9 @@ async def vplay(client, m: Message):
                         )
                 try:
                     if replied.video:
-                        songname = replied.video.file_name[:35] + "..."
+                        songname = replied.video.file_name[:50] + "..."
                     elif replied.document:
-                        songname = replied.document.file_name[:35] + "..."
+                        songname = replied.document.file_name[:50] + "..."
                 except:
                     songname = "Video"
 
