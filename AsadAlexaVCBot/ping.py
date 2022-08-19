@@ -53,7 +53,7 @@ async def ping(client, m: Message):
 
 @Client.on_message(contact_filter & filters.command(["restart"], prefixes=f"{HNDLR}"))
 async def restart(client, m: Message):
-    await m.reply("`Restarting...`")
+    await m.reply("`Memulai Ulang...`")
     os.execl(sys.executable, sys.executable, *sys.argv)
     # You probably don't need it but whatever
     quit()
@@ -63,7 +63,7 @@ async def restart(client, m: Message):
 async def help(client, m: Message):
     HELP = f"""
 👋 Hallo {m.from_user.mention}!
-🛠 MENU BANTUAN MUSIC PLAYER 🛠
+🛠 MENU BANTUAN EIKO MUSIC PLAYER 🛠
 
 ⚡ PERINTAH UNTUK SEMUA ORANG
 
@@ -91,5 +91,5 @@ async def help(client, m: Message):
 
 @Client.on_message(contact_filter & filters.command(["repo"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
-    REPO = f"**🛠 Jika kamu mau reponya 🛠** \n\n**Hubungi ke** [Az](t.me/tth_kiya98)\n**Jika kamu menyukainya silahkan ** [Bot Management](t.me/EikoManager_Bot) [Update](t.me/CatatanAz) [Gabung](t.me/CatatanAzDay)"
+    REPO = f"**🛠 Jika kamu mau reponya 🛠** \n\n**Hubungi ** [Az](t.me/tth_kiya98)\n**Jika kamu menyukainya silahkan** Gunakan [Bot Management](t.me/EikoManager_Bot) Untuk Mengatur grupmu dan cek [Update](t.me/CatatanAz) dan juga [Gabung](t.me/CatatanAzDay)"
     await m.reply(REPO)
