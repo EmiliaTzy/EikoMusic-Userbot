@@ -94,7 +94,7 @@ async def play(client, m: Message):
                         )
                         add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                         await huehue.edit(
-                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
+                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                         )
                     except Exception as hmme:
                         await huehue.edit(hmme)
@@ -139,7 +139,7 @@ async def play(client, m: Message):
                                         chat_id, songname, ytlink, url, "Audio", 0
                                     )
                                     await huehue.edit(
-                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
+                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                                     )
                                 except Exception as ep:
                                     await huehue.edit(f"`{ep}`")
@@ -161,7 +161,7 @@ async def play(client, m: Message):
                     hm, ytlink = await ytdl(url)
                     if hm == 0:
                         await huehue.edit(
-                            f"**YTDL ERROR ⚠️** Hubungi ke [Az](t.me/tth_kiya98)",
+                            f"**YTDL ERROR ⚠️** Hubungi [Az](t.me/tth_kiya98)",
                             disable_web_page_preview=True,
                         )
                     else:
@@ -183,7 +183,7 @@ async def play(client, m: Message):
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                                 await huehue.edit(
-                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}`"
+                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                                 )
                             except Exception as ep:
                                 await huehue.edit(f"`{ep}`")
