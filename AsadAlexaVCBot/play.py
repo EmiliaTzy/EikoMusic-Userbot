@@ -18,7 +18,7 @@ def ytsearch(query):
         for r in search.result()["result"]:
             ytid = r["id"]
             if len(r["title"]) > 34:
-                songname = r["title"][:50] + "..."
+                songname = r["title"][:60] + "..."
             else:
                 songname = r["title"]
             url = f"https://www.youtube.com/watch?v={ytid}"
@@ -72,10 +72,10 @@ async def play(client, m: Message):
                 link = replied.link
                 if replied.audio:
                     if replied.audio.title:
-                        songname = replied.audio.title[:50] + "..."
+                        songname = replied.audio.title[:60] + "..."
                     else:
                         if replied.audio.file_name:
-                            songname = replied.audio.file_name[:50] + "..."
+                            songname = replied.audio.file_name[:60] + "..."
                         else:
                             songname = "Audio"
                 elif replied.voice:
@@ -94,7 +94,7 @@ async def play(client, m: Message):
                         )
                         add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                         await huehue.edit(
-                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
+                            f"🎶 **Memulai Memutar Lagu▶** \n**🎧 Lagu** : [{songname[:60]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                         )
                     except Exception as hmme:
                         await huehue.edit(hmme)
@@ -139,7 +139,7 @@ async def play(client, m: Message):
                                         chat_id, songname, ytlink, url, "Audio", 0
                                     )
                                     await huehue.edit(
-                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
+                                        f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:60]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                                     )
                                 except Exception as ep:
                                     await huehue.edit(f"`{ep}`")
@@ -183,7 +183,7 @@ async def play(client, m: Message):
                                 )
                                 add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
                                 await huehue.edit(
-                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:50]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
+                                    f"🎶 **Memulai Memutar Lagu ▶** \n**🎧 Lagu** : [{songname[:60]}] \n**💬 Obrolan** : `{chat_id}` \n**🎧 Permintaan:** {m.from_user.mention}"
                                 )
                             except Exception as ep:
                                 await huehue.edit(f"`{ep}`")
